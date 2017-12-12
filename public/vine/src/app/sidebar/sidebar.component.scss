@@ -1,0 +1,132 @@
+#navBar{
+  background-color: #181818;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top:0;
+  z-index: 3;
+  min-height: 500px;
+
+  .logo{
+    background-color: #070707;
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    .first{
+      display: block;
+      color: rgb(253, 9, 84);
+      font-size: 50px;
+      width: 100%;
+      line-height: 45px;
+      position: relative;
+      z-index: 1;
+      padding-left: 4px;
+    }
+    .first:before{
+      top:0;
+      content: 'A';
+      color: white;
+      left: -4px;
+      position: absolute;
+      font-size: 50px;
+      width: 100%;
+      display: block;
+      line-height: 45px;
+    }
+    .short{
+      display: block;
+      color: white;
+      width: 100%;
+    }
+  }
+
+  .icons{
+    display: block;
+    text-align: center;
+    height: 210px;
+    top:50%;
+    margin-top: -120px;
+    width: 100%;
+    position: absolute;
+
+    a{
+      text-decoration: none;
+      position: relative;
+      display: block;
+      line-height: 45px;
+      height: 45px;
+      font-size: 24px;
+      color: #4d4d4e;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    a::after{
+      content: '';
+      font-size: 10px;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+    }
+
+    a:first-child::after{
+      content: 'HOME';
+    }
+    a:first-child + a::after{
+      content: 'ABOUT';
+    }
+    a:first-child + a + a::after{
+      content: 'SKILLS';
+    }
+    a:first-child + a + a + a::after{
+      content: 'MY WORK';
+    }
+    a:first-child + a + a + a + a::after{
+      content: 'CONTACT';
+    }
+
+    a:hover{
+      color: #08fdd8;
+      //opacity: 0;
+      i{
+        opacity: 0;
+      }
+      &::after{
+        opacity: 1;
+      }
+    }
+  }
+
+  ul{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+
+    a{
+      padding: 7px 0;
+      display: block;
+      font-size: 15px;
+      line-height: 16px;
+      color: #4d4d4e;
+    }
+    a:hover {
+      color: #08fdd8;
+    }
+  }
+}

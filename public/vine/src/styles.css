@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    background-color: #252627;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    margin:0;
+    color: #444;
+    font: 300 11px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif
+}

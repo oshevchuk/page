@@ -11,11 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//    return view('main');
+//});
 
-Route::get('/api/v1/employees/{id?}', 'Employees@index');
-Route::post('/api/v1/employees', 'Employees@store');
-Route::post('/api/v1/employees/{id}', 'Employees@update');
-Route::delete('/api/v1/employees/{id}', 'Employee@destroy');
+
+Route::any('{path?}', function()
+{
+    return view("main");
+})->where("path", ".+");
+
+//Route::get('/api/v1/employees/{id?}', 'Employees@index');
+//Route::post('/api/v1/employees', 'Employees@store');
+//Route::post('/api/v1/employees/{id}', 'Employees@update');
+//Route::delete('/api/v1/employees/{id}', 'Employee@destroy');

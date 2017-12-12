@@ -1,0 +1,21 @@
+<div class="contact-zone">
+    <div class="contact-form">
+        <p>Contact me:</p>
+        <input type="text" placeholder="You name">
+        <br>
+        <input type="text" placeholder="You email">
+        <br>
+        <input type="text" placeholder="message">
+
+    </div>
+    <div class="map-zone">
+        <div class="map-info">
+            Alexander Shevchuk
+            <br>
+            webdev22222222222222222222222222222222222222
+        </div>
+        <agm-map [latitude]="lat" [longitude]="lng" id="map" [styles]='style'>
+            <agm-marker [latitude]="lat" [longitude]="lng">1211111111111111111</agm-marker>
+        </agm-map>
+    </div>
+</div>

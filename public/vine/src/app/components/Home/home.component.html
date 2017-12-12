@@ -1,0 +1,42 @@
+<svg #canvasEl (window:resize)="onResize($event)">
+    <!--<circle r="40" cx="250" cy="50" ></circle>-->
+    <g *ngFor="let circle of circles">
+        <!--<circle r="{{circle.cx}}" cx="{{circle.cy}}" cy="{{circle.radius}}"></circle>-->
+        <circle [attr.r]="circle.radius" [attr.cx]="circle.cx" [attr.cy]="circle.cy" [attr.fill-opacity]="circle.fill"
+                fill="#08fdd8"></circle>
+    </g>
+</svg>
+
+<div id="page">
+
+    <div id="canvas"></div>
+
+    <a href="#" class="more"><span>more</span></a>
+    <div class="container">
+        <span class="tags"> &lt;body&gt;</span>
+        <span class="big letter">A</span>
+
+        <div class="text-zone">
+            <span class="tag"> &lt;h1&gt;</span>
+            <h1 class="blast-root" data-text="Hi,|I'm Alexander,|web developer.">
+
+            </h1>
+            <h2>Front End Developer / TypeScript / Angular JS</h2>
+
+            <a href="#" class="contact-btn">contact me</a>
+
+
+        </div>
+        <span class="tags bottom-tags">&nbsp;&nbsp;&nbsp; &lt;/body&gt;<br> &lt;/html&gt;</span>
+
+    </div>
+    <div class="animated zoomInRight foto"></div>
+</div>
+
+
+
+<!--<div class="text-zone">-->
+    <!--<div class="blast-root" #activeComponent (mousemove)="onMouseMove($event)"></div>-->
+    <!--<h1 class="blast-root" data-text="Hi,|I'm Alexander,|web developer.">-->
+<!--</h1>-->
+<!--</div>-->
